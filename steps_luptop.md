@@ -41,7 +41,7 @@ pacstrap /mnt base linux linux-firmware
 # configure the system
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt 
-pacman -S e2fsprogs ntfs-3g dosfstools nano vi vim man-db man-pages texinfo tldr sudo tree gparted htop wget thefuck git networkmanager iputils base-devel
+pacman -S e2fsprogs ntfs-3g dosfstools nano vi vim man-db man-pages texinfo tldr sudo tree gparted htop wget thefuck git networkmanager iputils base-devel tar gzip zip unzip
 ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
 hwclock --systohc
 
@@ -127,20 +127,16 @@ systemctl enable lightdm.service
 # TODO config
 
 # i3
-pacman -S i3 termite
+pacman -S i3 dmenu termite ttf-font-awesome xss-lock i3lock network-manager-applet pulseaudio pulseaudio-bluetooth pulseaudio-alsa pavucontrol
 # TODO config
 setxkbmap ch
-# autostart thunar
-thunar --daemon
 
 
 # Programs:
 yay -S brave-bin
-pacman -S geany gnumeric feh gimp vlc gvfs thunar p7zip thunar-media-tags-plugin thunar-archive-plugin thunar-volman
+pacman -S geany gnumeric feh gimp vlc gvfs thunar p7zip thunar-media-tags-plugin thunar-archive-plugin thunar-volman file-roller xorg-xmodmap
+yay -S teiler
 pacman -S telegram-desktop 
-
-
-
 
 
 # TODO later
