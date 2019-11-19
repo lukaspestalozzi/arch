@@ -1,2 +1,1 @@
-# arch
-Arch Installation notes and configs
+# Arch Linux installation guide
