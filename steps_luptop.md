@@ -54,7 +54,7 @@ mount /dev/sda5 /mnt/data
 pacstrap /mnt base linux linux-firmware
 ```
 
-## configure the system**
+## configure the system
 ```console
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt 
@@ -73,6 +73,7 @@ de_CH.UTF-8
 ```console
 locale-gen
 ```
+
 **edit /etc/locale.conf**
 ```console
 echo "LANG=en_GB.UTF-8" > /etc/locale.conf
@@ -183,7 +184,7 @@ systemctl enable lightdm.service
 ```console
 pacman -S i3 dmenu termite ttf-font-awesome xss-lock i3lock network-manager-applet pulseaudio pulseaudio-bluetooth pulseaudio-alsa pavucontrol
 ```
-TODO: config
+config: https://gitlab.com/lukas.pestalozzi/i3-config
 
 
 ## Programs:
@@ -191,7 +192,10 @@ TODO: config
 yay -S brave-bin teiler
 pacman -S geany gnumeric feh gimp vlc gvfs thunar p7zip thunar-media-tags-plugin thunar-archive-plugin thunar-volman file-roller xorg-xmodmap telegram-desktop alacritty
 ```
-TODO config alacritty
+config: https://gitlab.com/lukas.pestalozzi/config-alacritty
+
+**use https://snapcraft.io/**
+
 
 # TODO later
 https://wiki.archlinux.org/index.php/list_of_applications
